@@ -47,7 +47,14 @@ Available methods:
 	})
 
 ### Compatibility
-List voices
+- .listVoices is not available on macOs (see [say.js](https://github.com/marak/say.js/) feature matrix)
+
+### Todo
+- Change voice
+- Return promise to allow advanced chaining/scripting
 	
+### Contributions
+are welcome
+
 ### License
 MIT
