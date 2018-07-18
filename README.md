@@ -26,7 +26,7 @@ Set to a custom console, otherwise
 Set to speak all messages logged to console. Use with care as it might cause too much talking.
 - .transcribe
 Log messages in text along with reading them out
-	
+
 	assistant.getInstalledVoices(_ => {
 		assistant.log('Hello world')
 		assistant.log("I don't know why you say goodbye")
