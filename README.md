@@ -51,7 +51,7 @@ Available methods:
 
 ### Todo
 - Change voice
-- Return promise to allow advanced chaining/scripting
+- Return promises from .log/.warn/.error to allow advanced chaining/scripting
 	
 ### Contributions
 are welcome
