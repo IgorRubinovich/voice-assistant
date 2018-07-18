@@ -32,7 +32,7 @@ Available methods:
 - warn(message)
 - error(message)
 - attention(message)
-- getInstalledVoices
+- getInstalledVoices()
 
 ### Example
 
