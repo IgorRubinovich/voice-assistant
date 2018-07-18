@@ -1,0 +1,14 @@
+{
+  "name": "kacey-speaker",
+  "version": "0.0.1",
+  "description": "totally experimental",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "say": "^0.15.0"
+  }
+}
