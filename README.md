@@ -21,7 +21,7 @@ Set to change the name used in the preset greeting.
 - .greeting
 A greeting message upon initializion. Set to null to disable.
 - .console
-Set to a custom console, otherwise 
+Set to a custom console, otherwise global.console is used
 - .overrideConsole
 Set to speak all messages logged to console. Use with care as it might cause too much talking.
 - .transcribe
