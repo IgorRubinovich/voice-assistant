@@ -5,11 +5,14 @@ class VoiceAssistant {
 	constructor(opts = {}) {
 		opts.name = opts.name || "Voice assistant";
 		
-		if(opts.overrideConsole) {
-			console.log = this.log
-			console.warn = this.warn
-			console.error = this.error
-		}
+		this._console = opts.console || _console;
+		
+		this._c = {};
+		['log','warn','error'].forEach(k => {
+			this._c[k] = _console[k].bind(_console);
+			if(opts.overrideConsole)			 
+				_console[k] = this[k].bind(this)
+		})
 		
 		Object.assign(this, {
 			opts : opts,
@@ -17,6 +20,7 @@ class VoiceAssistant {
 			_queue : [],
 			speaking : false
 		});
+		
 		
 		opts.greeting = typeof opts.greeting == 'undefined' ? [this.opts.name, "activated"] : opts.greeting;
 		if(opts.greeting)
@@ -27,8 +31,8 @@ class VoiceAssistant {
 		
 		this.say && say.speak(phrase, voice, speed, cb); 
 
-		if(!say || this.opts.log) 
-			_console[kind](phrase);
+		if(!say || this.opts.transcribe) 
+			this._c[kind](phrase);
 	}
 	assistNext () { 
 		if(!this._queue.length)
@@ -56,11 +60,11 @@ class VoiceAssistant {
 
 }
 
-const assistant = new VoiceAssistant({ log : true });
-
 module.exports = VoiceAssistant;
 
 if(require.main == module) {
+	const assistant = new VoiceAssistant({ transcribe : true, overrideConsole : true });
+
 	assistant.getInstalledVoices(_ => {
 		assistant.log('Hello world')
 		assistant.log("I don't know why you say goodbye")
@@ -69,6 +73,6 @@ if(require.main == module) {
 		" ".repeat(10).split('').map((_, i) => i + 1).reverse().forEach(i => assistant.log(i));
 		assistant.attention("Self distruction initiated.")
 		assistant.error("Self distruction module was not available. Try applying a hammer and some physical force instead.")
-	})
+	});
 }
 
