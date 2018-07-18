@@ -1,6 +1,6 @@
 ## Voice-assistant
 
-A tiny wrapper around [say.js](https://github.com/marak/say.js/) to assist with background voice notifications, e.g. during development or monitoring.
+A tiny text-to-speech module wrapped around [say.js](https://github.com/marak/say.js/) to assist with background voice notifications, e.g. during development or monitoring.
 
 The main contributions on top of say.js are:
 - Sequentialization: your assistant will speak each next phrase after finishing the previous one
