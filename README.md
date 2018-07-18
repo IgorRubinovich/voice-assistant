@@ -10,10 +10,10 @@ The main contributions on top of say.js are:
 ### Install
 	npm install https://github.com/IgorRubinovich/voice-assistant
 	
-### Usage
+### API
 	const Assistant = require('voice-assistant');
 	
-	const assistant = Assistant(opts);
+	const assistant = new Assistant(opts);
 	
 Where opts are:
 - .name
@@ -27,6 +27,15 @@ Set to speak all messages logged to console. Use with care as it might cause too
 - .transcribe
 Log messages in text along with reading them out
 
+Available methods:
+- log(message)
+- warn(message)
+- error(message)
+- attention(message)
+- getInstalledVoices
+
+### Example
+
 	assistant.getInstalledVoices(_ => {
 		assistant.log('Hello world')
 		assistant.log("I don't know why you say goodbye")
@@ -37,5 +46,8 @@ Log messages in text along with reading them out
 		assistant.error("Self distruction module was not available. Try applying a hammer and some physical force instead.")
 	})
 
+### Compatibility
+List voices
+	
 ### License
 MIT
