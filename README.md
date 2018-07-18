@@ -1,6 +1,6 @@
 ## Voice-assistant
 
-A wrapper around [say](say) to assist with background voice notifications, e.g. during development or monitoring.
+A wrapper around [say](https://github.com/marak/say.js/) to assist with background voice notifications, e.g. during development or monitoring.
 
 ### Install
 	npm install https://github.com/IgorRubinovich/voice-assistant
