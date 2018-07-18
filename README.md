@@ -1,6 +1,6 @@
 ## Voice-assistant
 
-A wrapper around [say](https://github.com/marak/say.js/) to assist with background voice notifications, e.g. during development or monitoring.
+A tiny wrapper around [say.js](https://github.com/marak/say.js/) to assist with background voice notifications, e.g. during development or monitoring.
 
 ### Install
 	npm install https://github.com/IgorRubinovich/voice-assistant
