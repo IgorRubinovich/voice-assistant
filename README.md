@@ -28,11 +28,11 @@ Set to speak all messages logged to console. Use with care as it might cause too
 Log messages in text along with reading them out
 
 Available methods:
-- log(message)
-- warn(message)
-- error(message)
-- attention(message)
-- getInstalledVoices()
+- log(message) - Speak message and use console.log for transcription
+- warn(message) - prefix message with "Warning" and use console.warn for transcription
+- error(message) - prefix message with "Attention, error" and use console.error for transcription
+- attention(message) - prefix message with "Attention" and use console.log for transcription
+- getInstalledVoices(callback)
 
 ### Example
 
