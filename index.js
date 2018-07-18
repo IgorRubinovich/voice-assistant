@@ -41,7 +41,7 @@ class VoiceAssistant {
 		this.speaking = true; 
 		
 		const a = this._queue.pop();
-		this.speak(a[0], undefined, undefined, a[1], this.assistNext.bind(this)) 
+		this.speak(a[0], undefined, undefined, a[1], _ => (this.speaking = false, this.assistNext(this))) 
 	}
 	_say(a, kind = 'log') {
 		a = a instanceof Array ? a : [a];
