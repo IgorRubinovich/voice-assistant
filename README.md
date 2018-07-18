@@ -47,7 +47,7 @@ Available methods:
 	})
 
 ### Compatibility
-- .listVoices is not available on macOs (see [say.js](https://github.com/marak/say.js/) feature matrix)
+- .getInstalledVoices is not available on macOs (see [say.js](https://github.com/marak/say.js/) feature matrix)
 
 ### Todo
 - Change voice
